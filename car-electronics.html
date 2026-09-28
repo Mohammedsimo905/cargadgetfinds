@@ -13,6 +13,91 @@
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:'Quicksand',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased}
   .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  <!-- Navigation Menu -->
+<nav class="navbar">
+  <div class="wrap nav-wrap">
+    <a href="https://mohammedsimo905.github.io/cargadgetfinds/" class="brand-logo">
+      🚗 CarGadget<span>Finds</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="https://mohammedsimo905.github.io/cargadgetfinds/" class="active">Home</a></li>
+      <li><a href="https://mohammedsimo905.github.io/cargadgetfinds/#electronics">Car Electronics</a></li>
+      <li><a href="https://mohammedsimo905.github.io/cargadgetfinds/#dashcams">Dash Cams</a></li>
+      <li><a href="https://mohammedsimo905.github.io/cargadgetfinds/#accessories">Interior Accessories</a></li>
+      <li><a href="https://mohammedsimo905.github.io/cargadgetfinds/#about">About Us</a></li>
+    </ul>
+  </div>
+</nav>
+  /* --- Navigation Menu Styles --- */
+  .navbar {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+  }
+  .brand-logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .brand-logo span {
+    color: var(--accent);
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    align-items: center;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.2s ease;
+  }
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--accent);
+  }
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text);
+  }
+
+  @media (max-width:768px){
+    .nav-toggle { display: block; }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      padding: 20px;
+      border-bottom: 1px solid var(--border);
+      gap: 16px;
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    }
+    .nav-links.active { display: flex; }
+  }
   header{background:linear-gradient(135deg,#e0f2fe 0%,#f8fafc 60%);border-bottom:1px solid var(--border);padding:48px 0 36px}
   .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:6px 14px;border-radius:999px;margin-bottom:16px}
   h1{font-size:clamp(28px,4.5vw,44px);font-weight:700;line-height:1.15;letter-spacing:-.02em}
@@ -121,5 +206,9 @@
   render(PRODUCTS);
 })();
 </script>
+  // Mobile Navigation Toggle
+document.getElementById('navToggle').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('active');
+});
 </body>
 </html>
