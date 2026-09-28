@@ -138,9 +138,98 @@
   footer{border-top:1px solid var(--border);padding:32px 0 48px;text-align:center;color:var(--muted);font-size:13px}
   footer .disc{margin-top:10px;font-size:12px;max-width:640px;margin-left:auto;margin-right:auto}
   @media (max-width:640px){header{padding:32px 0 24px}.grid{grid-template-columns:1fr}}
+  /* Fix sticky search bar offset */
+  .search-bar{position:sticky;top:64px;z-index:50;background:rgba(248,250,252,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:16px 0}
+
+  /* Navigation Menu Styles */
+  .navbar {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+  }
+  .nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+  }
+  .brand-logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .brand-logo span {
+    color: var(--accent);
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    align-items: center;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.2s ease;
+  }
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--accent);
+  }
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text);
+  }
+
+  @media (max-width:768px){
+    .nav-toggle { display: block; }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      padding: 20px;
+      border-bottom: 1px solid var(--border);
+      gap: 16px;
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    }
+    .nav-links.show-menu { display: flex !important; }
+  }
 </style>
 </head>
 <body>
+   <!-- Navigation Menu -->
+<nav class="navbar">
+  <div class="wrap nav-wrap">
+    <a href="https://mohammedsimo905.github.io/cargadgetfinds/" class="brand-logo">
+      🚗 CarGadget<span>Finds</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="https://mohammedsimo905.github.io/cargadgetfinds/" class="active">Home</a></li>
+      <li><a href="https://mohammedsimo905.github.io/cargadgetfinds/#electronics">Car Electronics</a></li>
+      <li><a href="https://mohammedsimo905.github.io/cargadgetfinds/#dashcams">Dash Cams</a></li>
+      <li><a href="https://mohammedsimo905.github.io/cargadgetfinds/#accessories">Interior Accessories</a></li>
+      <li><a href="https://mohammedsimo905.github.io/cargadgetfinds/#about">About Us</a></li>
+    </ul>
+  </div>
+</nav>
 <header>
   <div class="wrap">
     <span class="eyebrow">Updated Monthly · Amazon Hot New Releases</span>
@@ -210,5 +299,16 @@
 document.getElementById('navToggle').addEventListener('click', function() {
   document.getElementById('navLinks').classList.toggle('active');
 });
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var navToggle = document.getElementById('navToggle');
+    var navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('show-menu');
+      });
+    }
+  });
+</script>
 </body>
 </html>
