@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Best car exterior accessories on Amazon — car covers, tarps, license plate frames, towing gear, bungee straps & more. Updated every 2 weeks with the hottest new releases.">
-<meta property="og:title" content="Best Car Exterior Accessories on Amazon — Covers, Tarps & More">
-<meta property="og:description" content="Curated list of the hottest new car exterior accessories on Amazon, updated every 2 weeks.">
+<meta name="description" content="Best car exterior accessories on Amazon — car covers, tarps, license plate frames, towing gear & more. Updated every 2 weeks.">
+<meta property="og:title" content="CarGadgetFinds — Best Car Accessories on Amazon">
+<meta property="og:description" content="Curated list of the hottest new car products on Amazon, updated every 2 weeks.">
 <meta property="og:type" content="website">
-<title>Home | CarGadgetFinds — Best Car Exterior Accessories on Amazon</title>
+<title>Home | CarGadgetFinds</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,9 +18,8 @@
     --accent2: #0d9488; --border: rgba(15,23,42,.08); --nav-bg: #0b192c;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Quicksand', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  body { font-family: 'Quicksand', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
   .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-
   /* Navbar */
   .navbar { background: var(--nav-bg); border-bottom: 3px solid var(--accent); position: sticky; top: 0; z-index: 100; }
   .nav-wrap { display: flex; justify-content: space-between; align-items: center; height: 64px; }
@@ -35,7 +34,6 @@
     .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--nav-bg); padding: 20px; gap: 16px; box-shadow: 0 10px 15px -3px rgba(0,0,0,.3); }
     .nav-links.active { display: flex; }
   }
-
   /* Hero */
   header { background: linear-gradient(135deg, #e0f2fe 0%, #f8fafc 60%); border-bottom: 1px solid var(--border); padding: 56px 0 44px; text-align: center; }
   .eyebrow { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); background: var(--accent-soft); padding: 6px 14px; border-radius: 999px; margin-bottom: 18px; }
@@ -46,179 +44,99 @@
   .stat { text-align: center; }
   .stat .num { font-size: 28px; font-weight: 700; color: var(--accent); }
   .stat .lbl { font-size: 13px; color: var(--muted); font-weight: 600; }
-  .cta { display: inline-block; background: var(--accent); color: #fff; padding: 13px 32px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 16px; margin-top: 28px; transition: background .2s, transform .1s; }
+  .cta { display: inline-block; background: var(--accent); color: #fff; padding: 13px 32px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 16px; margin-top: 28px; transition: background .2s; }
   .cta:hover { background: var(--accent-dark); }
-  .cta:active { transform: scale(.97); }
-
   /* Disclosure */
-  .disclosure { max-width: 900px; margin: 28px auto 0; background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid var(--accent); border-radius: 12px; padding: 14px 20px; font-size: 13.5px; color: #0c4a6e; text-align: left; }
+  .disclosure { max-width: 900px; margin: 28px auto 0; background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid var(--accent); border-radius: 12px; padding: 14px 20px; font-size: 13.5px; color: #0c4a6e; }
   .disclosure strong { color: #075985; }
-
   /* Sections */
   section { padding: 48px 0; }
   h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
   .section-sub { color: var(--muted); margin-bottom: 28px; font-size: 15px; }
-
   /* Category grid */
   .cat-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
-  .cat-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; text-decoration: none; color: var(--text); transition: transform .2s, box-shadow .2s, border-color .2s; display: block; }
+  .cat-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; text-decoration: none; color: var(--text); transition: transform .2s, box-shadow .2s; display: block; }
   .cat-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(15,23,42,.08); border-color: rgba(2,132,199,.35); }
   .cat-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--accent-soft); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; color: var(--accent); }
-  .cat-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 4px; color: var(--text); }
+  .cat-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
   .cat-card p { font-size: 13.5px; color: var(--muted); margin: 0; }
   .cat-card .arrow { color: var(--accent); font-weight: 700; font-size: 13px; margin-top: 10px; display: inline-block; }
-
-  /* Why trust */
-  .why { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px; }
-  .why-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 20px; }
-  .why-item { display: flex; gap: 14px; align-items: flex-start; }
-  .why-icon { flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px; background: rgba(13,148,136,.12); display: flex; align-items: center; justify-content: center; color: var(--accent2); }
-  .why-item h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
-  .why-item p { font-size: 13.5px; color: var(--muted); margin: 0; }
-
   /* Footer */
   footer { background: var(--nav-bg); color: #94a3b8; padding: 36px 20px; text-align: center; font-size: 13px; margin-top: 40px; }
   footer a { color: #60a5fa; text-decoration: none; }
   footer a:hover { text-decoration: underline; }
-  footer .disc { margin-top: 10px; font-size: 12px; max-width: 640px; margin-left: auto; margin-right: auto; line-height: 1.6; }
 </style>
 </head>
 <body>
-
 <nav class="navbar">
   <div class="wrap nav-wrap">
     <a href="index.html" class="brand-logo"><span class="dot"></span>CarGadgetFinds</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="best-body-armor.html">Body Armor</a></li>
       <li><a href="car-electronics.html">All Products</a></li>
-      <li><a href="car-electronics.html#car-covers">Car Covers</a></li>
-      <li><a href="car-electronics.html#tarps">Tarps</a></li>
-      <li><a href="car-electronics.html#license-plates">License Plates</a></li>
+      <li><a href="best-dash-cams.html">Dash Cams</a></li>
+      <li><a href="best-body-armor.html">Body Armor</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 </nav>
-
 <header>
   <div class="wrap">
     <span class="eyebrow">Amazon Hot New Releases &middot; Updated Every 2 Weeks</span>
-    <h1>Best <span class="grad">Car Exterior Accessories</span> on Amazon — Covers, Tarps, License Plates &amp; More</h1>
-    <p class="sub">We research the hottest new releases in car exterior accessories every 2 weeks — car covers, tarps, license plate frames, towing gear, bungee straps &amp; more — so you don't have to.</p>
+    <h1>Best <span class="grad">Car Accessories & Gadgets</span> on Amazon</h1>
+    <p class="sub">We research the hottest new releases in car accessories every 2 weeks — dash cams, exterior protection, electronics & more.</p>
     <div class="stats">
       <div class="stat"><div class="num">60+</div><div class="lbl">Products tracked</div></div>
-      <div class="stat"><div class="num">13</div><div class="lbl">Categories</div></div>
+      <div class="stat"><div class="num">4</div><div class="lbl">Categories</div></div>
       <div class="stat"><div class="num">2 wks</div><div class="lbl">Refresh cycle</div></div>
     </div>
     <a class="cta" href="car-electronics.html">Browse All Products &rarr;</a>
     <div class="disclosure">
-      <strong>Affiliate Disclosure:</strong> CarGadgetFinds is a participant in the Amazon Services LLC Associates Program. As an Amazon Associate, we earn from qualifying purchases — at no extra cost to you. Prices and availability are subject to change on Amazon.
+      <strong>Affiliate Disclosure:</strong> CarGadgetFinds is a participant in the Amazon Services LLC Associates Program. As an Amazon Associate, we earn from qualifying purchases — at no extra cost to you.
     </div>
   </div>
 </header>
-
 <section>
   <div class="wrap">
     <h2>Browse by Category</h2>
-    <p class="section-sub">Jump straight to the car exterior accessories you're looking for.</p>
+    <p class="section-sub">Jump straight to the products you're looking for.</p>
     <div class="cat-grid">
       <a class="cat-card" href="car-electronics.html">
-        <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <div class="cat-icon">&#128736;</div>
         <h3>All Products</h3>
-        <p>60+ trending car exterior accessories — full list with prices &amp; ratings</p>
+        <p>Complete list of trending car accessories</p>
         <span class="arrow">View all &rarr;</span>
       </a>
-      <a class="cat-card" href="car-electronics.html">
-        <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></div>
-        <h3>Car Covers</h3>
-        <p>Waterproof all-weather covers for cars, SUVs &amp; trucks</p>
-        <span class="arrow">Shop covers &rarr;</span>
+      <a class="cat-card" href="best-dash-cams.html">
+        <div class="cat-icon">&#128247;</div>
+        <h3>Dash Cams</h3>
+        <p>4K, dual & 3-channel dash cameras</p>
+        <span class="arrow">Shop dash cams &rarr;</span>
+      </a>
+      <a class="cat-card" href="best-body-armor.html">
+        <div class="cat-icon">&#128737;</div>
+        <h3>Body Armor</h3>
+        <p>Fender flares, corner guards, door sill protectors</p>
+        <span class="arrow">Shop armor &rarr;</span>
       </a>
       <a class="cat-card" href="car-electronics.html">
-        <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
-        <h3>Tarps &amp; Vinyl</h3>
-        <p>Heavy-duty clear tarps, 14mil waterproof with grommets</p>
-        <span class="arrow">Shop tarps &rarr;</span>
-      </a>
-      <a class="cat-card" href="car-electronics.html">
-        <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="12" r="2"/><path d="M13 10h5M13 14h3"/></svg></div>
-        <h3>License Plates</h3>
-        <p>Frames, covers, brackets &amp; mounting hardware</p>
-        <span class="arrow">Shop plates &rarr;</span>
-      </a>
-      <a class="cat-card" href="car-electronics.html">
-        <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-        <h3>Towing &amp; Trailer</h3>
-        <p>Hitch pins, breakaway cables, winch straps &amp; lights</p>
-        <span class="arrow">Shop towing &rarr;</span>
-      </a>
-      <a class="cat-card" href="car-electronics.html">
-        <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-        <h3>Straps &amp; Cords</h3>
-        <p>Bungee cords, ratchet straps, tarp clips &amp; ball bungees</p>
-        <span class="arrow">Shop straps &rarr;</span>
-      </a>
-      <a class="cat-card" href="car-electronics.html">
-        <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-        <h3>Tools &amp; Jacks</h3>
-        <p>Scissor jacks, jack stands, engine hoists &amp; lift tools</p>
-        <span class="arrow">Shop tools &rarr;</span>
-      </a>
-      <a class="cat-card" href="car-electronics.html">
-        <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg></div>
-        <h3>Decals &amp; Magnets</h3>
-        <p>Bumper magnets, stickers, baby-on-board &amp; new driver signs</p>
-        <span class="arrow">Shop decals &rarr;</span>
+        <div class="cat-icon">&#128250;</div>
+        <h3>Exterior Accessories</h3>
+        <p>Covers, tarps, towing & more</p>
+        <span class="arrow">Shop exterior &rarr;</span>
       </a>
     </div>
   </div>
 </section>
-
-<section style="background:#fff; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
-  <div class="wrap">
-    <h2>Why Trust Our Recommendations?</h2>
-    <p class="section-sub">We do the research so you can buy with confidence.</p>
-    <div class="why">
-      <div class="why-grid">
-        <div class="why-item">
-          <div class="why-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-          <div><h4>Real Amazon Data</h4><p>Every product comes from Amazon's Hot New Releases charts — verified trending, not paid placements.</p></div>
-        </div>
-        <div class="why-item">
-          <div class="why-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div><h4>Updated Every 2 Weeks</h4><p>Lists refresh regularly so you always see the newest, most popular products — not stale best-sellers.</p></div>
-        </div>
-        <div class="why-item">
-          <div class="why-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c2.4 0 4.58.94 6.2 2.47"/></svg></div>
-          <div><h4>Direct Amazon Links</h4><p>Every product links straight to Amazon — check live prices, verified reviews, and buy with your Prime account.</p></div>
-        </div>
-        <div class="why-item">
-          <div class="why-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <div><h4>No Extra Cost</h4><p>As an Amazon Associate we earn a small commission from qualifying purchases — it never changes the price you pay.</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section style="text-align:center;">
-  <div class="wrap">
-    <h2>Fresh Products Every 2 Weeks</h2>
-    <p class="section-sub" style="max-width:560px;margin-left:auto;margin-right:auto;">Bookmark this page and check back — we add new car exterior accessories as they hit the Amazon Hot New Releases charts.</p>
-    <a class="cta" href="car-electronics.html">See All 60+ Products &rarr;</a>
-  </div>
-</section>
-
 <footer>
   <div class="wrap">
-    <p style="margin-bottom:8px;"><strong style="color:#e2e8f0">CarGadgetFinds</strong> — Best car exterior accessories on Amazon</p>
-    <p style="margin-bottom:8px;"><a href="index.html">Home</a> &middot; <a href="car-electronics.html">All Products</a> &middot; <a href="privacy-policy.html">Privacy Policy</a> &middot; <a href="about.html">About</a> &middot; <a href="contact.html">Contact</a></p>
-    <p class="disc">Disclosure: As an Amazon Associate I earn from qualifying purchases. This site contains affiliate links. Product prices and availability are accurate as of the date/time indicated and are subject to change. Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</p>
+    <p><strong style="color:#e2e8f0">CarGadgetFinds</strong> — Best car accessories on Amazon</p>
+    <p style="margin:10px 0;"><a href="index.html">Home</a> &middot; <a href="car-electronics.html">All Products</a> &middot; <a href="best-dash-cams.html">Dash Cams</a> &middot; <a href="best-body-armor.html">Body Armor</a></p>
+    <p style="font-size:12px; line-height:1.6;">Disclosure: As an Amazon Associate I earn from qualifying purchases. Prices and availability are subject to change.</p>
   </div>
 </footer>
-
 <script>
 (function(){
   var navToggle = document.getElementById('navToggle');
