@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4752143998683844" crossorigin="anonymous"></script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Top hot new car exterior accessories on Amazon — car covers, tarps, license plate frames, towing gear, bungee straps & more. Updated every 2 weeks with the latest trending releases.">
@@ -212,13 +214,14 @@
     <a href="index.html" class="brand-logo"><span class="dot"></span>CarGadgetFinds</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
     <ul class="nav-links" id="navLinks">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="car-electronics.html">All Products</a></li>
-  <li><a href="best-dash-cams.html">Dash Cams</a></li>
-  <li><a href="best-body-armor.html">Body Armor</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="contact.html">Contact</a></li>
-</ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="car-electronics.html" class="active">All Products</a></li>
+      <li><a href="best-dash-cams.html">Dash Cams</a></li>
+      <li><a href="best-wireless-carplay.html">CarPlay</a></li>
+      <li><a href="best-backup-cameras.html">Backup Cameras</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </div>
 </nav>
 
@@ -394,6 +397,18 @@ B0HD85F9BR | License Plate Frame for BMW Car Decorative Accessories with Screws 
     chipsWrap.appendChild(chip);
   });
 
+  /* Fix Amazon hotlink blocking: rewrite domain + no referrer */
+  function fixImgUrl(url){
+    if (!url) return url;
+    /* Extract image ID: /images/I/XXXXX._AC_XXX_.jpg */
+    var m = url.match(/\/images\/I\/([A-Za-z0-9]+)\._/);
+    if (m){
+      /* Use m.media-amazon.com (allows hotlinking) with 500px size */
+      return 'https://m.media-amazon.com/images/I/' + m[1] + '._AC_SL500_.jpg';
+    }
+    return url.replace('images-na.ssl-images-amazon.com', 'm.media-amazon.com');
+  }
+
   /* ===== Image URL builder — user-provided first, then Amazon Associates widget ===== */
   function imgUrls(p){
     var urls = [];
@@ -453,12 +468,13 @@ B0HD85F9BR | License Plate Frame for BMW Car Decorative Accessories with Screws 
       img.className = 'card-img';
       img.alt = p.name;
       img.loading = 'lazy';
+      img.referrerPolicy = 'no-referrer';
       var urls = imgUrls(p);
       var tryIdx = 0;
       img.onerror = function(){
         tryIdx++;
         if (tryIdx < urls.length){
-          img.src = urls[tryIdx];
+          img.src = fixImgUrl(urls[tryIdx]);
         } else {
           /* All failed — show clean branded placeholder with category icon */
           var fb = document.createElement('div');
@@ -467,7 +483,7 @@ B0HD85F9BR | License Plate Frame for BMW Car Decorative Accessories with Screws 
           imgWrap.replaceChild(fb, img);
         }
       };
-      img.src = urls[0];
+      img.src = fixImgUrl(urls[0]);
       imgWrap.appendChild(img);
       card.appendChild(imgWrap);
 

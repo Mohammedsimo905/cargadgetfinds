@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4752143998683844" crossorigin="anonymous"></script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Best dash cams on Amazon — 4K, dual-channel, 360°, 3-channel, mini & more. Real prices, ratings & verified reviews. Updated every 2 weeks.">
@@ -215,7 +217,7 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="car-electronics.html">All Products</a></li>
       <li><a href="best-dash-cams.html" class="active">Dash Cams</a></li>
-      <li><a href="best-body-armor.html">Body Armor</a></li>
+      <li><a href="best-wireless-carplay.html">CarPlay</a></li>
       <li><a href="best-backup-cameras.html">Backup Cameras</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -422,6 +424,18 @@ B0H3K5J1R6 | Coxpal 4K+2K Dual Dash Cam Front and Rear, Starvis 2 IMX678 with HD
     chipsWrap.appendChild(chip);
   });
 
+  /* Fix Amazon hotlink blocking: rewrite domain + no referrer */
+  function fixImgUrl(url){
+    if (!url) return url;
+    /* Extract image ID: /images/I/XXXXX._AC_XXX_.jpg */
+    var m = url.match(/\/images\/I\/([A-Za-z0-9]+)\._/);
+    if (m){
+      /* Use m.media-amazon.com (allows hotlinking) with 500px size */
+      return 'https://m.media-amazon.com/images/I/' + m[1] + '._AC_SL500_.jpg';
+    }
+    return url.replace('images-na.ssl-images-amazon.com', 'm.media-amazon.com');
+  }
+
   /* ===== Image URL builder — user-provided first, then Amazon Associates widget ===== */
   function imgUrls(p){
     var urls = [];
@@ -481,12 +495,13 @@ B0H3K5J1R6 | Coxpal 4K+2K Dual Dash Cam Front and Rear, Starvis 2 IMX678 with HD
       img.className = 'card-img';
       img.alt = p.name;
       img.loading = 'lazy';
+      img.referrerPolicy = 'no-referrer';
       var urls = imgUrls(p);
       var tryIdx = 0;
       img.onerror = function(){
         tryIdx++;
         if (tryIdx < urls.length){
-          img.src = urls[tryIdx];
+          img.src = fixImgUrl(urls[tryIdx]);
         } else {
           /* All failed — show clean branded placeholder with category icon */
           var fb = document.createElement('div');
@@ -495,7 +510,7 @@ B0H3K5J1R6 | Coxpal 4K+2K Dual Dash Cam Front and Rear, Starvis 2 IMX678 with HD
           imgWrap.replaceChild(fb, img);
         }
       };
-      img.src = urls[0];
+      img.src = fixImgUrl(urls[0]);
       imgWrap.appendChild(img);
       card.appendChild(imgWrap);
 
